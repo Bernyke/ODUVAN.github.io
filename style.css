@@ -1,0 +1,91 @@
+.physics-section {
+    background: linear-gradient(135deg, #1a2980, #26d0ce);
+    padding: 40px;
+    border-radius: 20px;
+    margin: 40px 0;
+    color: white;
+    text-align: center;
+}
+
+.physics-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    margin: 30px 0;
+    overflow: hidden;
+}
+
+.physics-card {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    user-select: none;
+    border-radius: 10px;
+}
+
+.card-front {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.card-front h3 {
+    color: #333;
+    font-size: 28px;
+    margin: 0;
+}
+
+.card-front .suit {
+    font-size: 40px;
+}
+
+.physics-card:nth-child(1) .suit { color: #000; } /* ♠ */
+.physics-card:nth-child(2) .suit { color: #e74c3c; } /* ♥ */
+.physics-card:nth-child(3) .suit { color: #e74c3c; } /* ♦ */
+.physics-card:nth-child(4) .suit { color: #000; } /* ♣ */
+
+.physics-card:hover .card-front {
+    transform: translateY(-5px) rotate(2deg);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.physics-card.dragging {
+    z-index: 1000;
+    cursor: grabbing;
+}
+
+.physics-card.thrown {
+    transition: transform 0.5s ease, left 0.5s ease, top 0.5s ease;
+}
+
+.action-btn {
+    background: white;
+    color: #1a2980;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    background: #f1f1f1;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
