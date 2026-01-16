@@ -127,35 +127,43 @@
                 <p>Третье фото с описанием. Не забудьте заменить на свои изображения!</p>
             </div>
         </div>
-    </div>
-    <section class="interactive-section">
-    <h2>🎯 Перетаскиваемые фото</h2>
-    <p class="hint">Зажмите и перетащите фото в любое место!</p>
+    </div> 
+    <section class="physics-section">
+    <h2>🎪 Игральные карты</h2>
+    <p class="hint">Кликните, перетащите, бросьте! Карты будут отскакивать!</p>
     
-    <div class="draggable-gallery">
-        <!-- Фото с классом draggable -->
-        <div class="draggable-photo" style="left: 50px; top: 50px;">
-            <img src="https://via.placeholder.com/200x150/3498db/ffffff?text=Фото+1" 
-                 alt="Перетаскиваемая картинка 1">
-            <div class="drag-handle">☰ Перетащи меня</div>
+    <div class="physics-container" id="physicsContainer">
+        <div class="physics-card" style="left: 100px; top: 100px;">
+            <div class="card-front">
+                <h3>А</h3>
+                <div class="suit">♠</div>
+            </div>
         </div>
         
-        <div class="draggable-photo" style="left: 300px; top: 100px;">
-            <img src="https://via.placeholder.com/200x150/2ecc71/ffffff?text=Фото+2" 
-                 alt="Перетаскиваемая картинка 2">
-            <div class="drag-handle">☰ Перетащи меня</div>
+        <div class="physics-card" style="left: 200px; top: 150px;">
+            <div class="card-front">
+                <h3>K</h3>
+                <div class="suit">♥</div>
+            </div>
         </div>
         
-        <div class="draggable-photo" style="left: 100px; top: 300px;">
-            <img src="https://via.placeholder.com/200x150/e74c3c/ffffff?text=Фото+3" 
-                 alt="Перетаскиваемая картинка 3">
-            <div class="drag-handle">☰ Перетащи меня</div>
+        <div class="physics-card" style="left: 300px; top: 100px;">
+            <div class="card-front">
+                <h3>Q</h3>
+                <div class="suit">♦</div>
+            </div>
+        </div>
+        
+        <div class="physics-card" style="left: 400px; top: 150px;">
+            <div class="card-front">
+                <h3>J</h3>
+                <div class="suit">♣</div>
+            </div>
         </div>
     </div>
     
-    <div class="drop-zone">
-        <p>📥 Бросьте фото сюда!</p>
-    </div>
+    <button class="action-btn" id="shuffleBtn">🔄 Перемешать</button>
+    <button class="action-btn" id="throwBtn">🎯 Бросить все</button>
 </section>
     
     <footer>
